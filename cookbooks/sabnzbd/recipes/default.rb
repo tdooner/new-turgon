@@ -13,6 +13,7 @@ directory '/home/sabnzbd' do
 end
 
 package 'par2'
+package 'unrar-free'
 
 easy_install_package 'cheetah' do
   version '2.4.4'
@@ -40,3 +41,5 @@ end
 service 'sabnzbd' do
   action [:enable, :start]
 end
+
+include_recipe 'sabnzbd::_nginx'
