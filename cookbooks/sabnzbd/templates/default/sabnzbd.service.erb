@@ -1,0 +1,12 @@
+[Unit]
+Description=SabNZBd downloader
+After=network.target
+
+[Service]
+User=<%= node['sabnzbd']['user'] %>
+Group=<%= node['sabnzbd']['user'] %>
+WorkingDirectory=/usr/local/sabnzbd
+ExecStart=/usr/bin/python SABnzbd.py
+
+[Install]
+WantedBy=multi-user.target
