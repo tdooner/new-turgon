@@ -1,0 +1,3 @@
+[submodule "cookbooks/ark"]
+	path = cookbooks/ark
+	url = git@github.com:burtlo/ark.git
