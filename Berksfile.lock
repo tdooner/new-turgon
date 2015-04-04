@@ -1,0 +1,42 @@
+DEPENDENCIES
+  nginx_wrapper
+    path: cookbooks/nginx_wrapper
+  sabnzbd
+    path: cookbooks/sabnzbd
+
+GRAPH
+  7-zip (1.0.2)
+    windows (>= 1.2.2)
+  apt (2.7.0)
+  ark (0.9.0)
+    7-zip (>= 0.0.0)
+    windows (>= 0.0.0)
+  bluepill (2.3.1)
+    rsyslog (>= 0.0.0)
+  build-essential (2.2.2)
+  chef_handler (1.1.6)
+  nginx (2.7.6)
+    apt (~> 2.2)
+    bluepill (~> 2.3)
+    build-essential (~> 2.0)
+    ohai (~> 2.0)
+    runit (~> 1.2)
+    yum-epel (~> 0.3)
+  nginx_wrapper (0.1.0)
+    nginx (>= 0.0.0)
+    ssl_certificate (>= 0.0.0)
+  ohai (2.0.1)
+  rsyslog (1.15.0)
+  runit (1.5.18)
+    build-essential (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  sabnzbd (0.1.0)
+    ark (>= 0.0.0)
+    nginx (>= 0.0.0)
+  ssl_certificate (1.3.0)
+  windows (1.36.6)
+    chef_handler (>= 0.0.0)
+  yum (3.5.3)
+  yum-epel (0.6.0)
+    yum (~> 3.0)
