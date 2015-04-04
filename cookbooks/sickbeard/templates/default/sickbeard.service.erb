@@ -1,0 +1,12 @@
+[Unit]
+Description=Sickbeard indexer
+After=network.target
+
+[Service]
+User=<%= node['sickbeard']['user'] %>
+Group=<%= node['sickbeard']['user'] %>
+WorkingDirectory=/usr/local/sickbeard
+ExecStart=/usr/bin/python SickBeard.py
+
+[Install]
+WantedBy=multi-user.target

@@ -3,6 +3,8 @@ DEPENDENCIES
     path: cookbooks/nginx_wrapper
   sabnzbd
     path: cookbooks/sabnzbd
+  sickbeard
+    path: cookbooks/sickbeard
 
 GRAPH
   7-zip (1.0.2)
@@ -34,6 +36,7 @@ GRAPH
   sabnzbd (0.1.0)
     ark (>= 0.0.0)
     nginx (>= 0.0.0)
+  sickbeard (0.1.0)
   ssl_certificate (1.3.0)
   windows (1.36.6)
     chef_handler (>= 0.0.0)
