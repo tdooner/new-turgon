@@ -1,0 +1,9 @@
+{
+  "name": "mediacenter",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "run_list": [
+    "nginx_wrapper",
+    "sabnzbd"
+  ]
+}
