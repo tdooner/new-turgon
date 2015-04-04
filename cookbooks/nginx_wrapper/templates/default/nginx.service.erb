@@ -3,9 +3,12 @@ Description=Nginx
 After=network.target
 
 [Service]
+Type=forking
 PIDFile=/var/run/nginx/nginx.pid
+ExecStartPre=/opt/nginx-1.6.2/sbin/nginx -t
 ExecStart=/opt/nginx-1.6.2/sbin/nginx
 ExecReload=/bin/kill -HUP $MAINPID
+ExecStop=/bin/kill -s QUIT $MAINPID
 
 [Install]
 WantedBy=multi-user.target
