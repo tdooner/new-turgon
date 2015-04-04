@@ -25,3 +25,5 @@ execute 'systemctl-daemon-reload' do
   command 'systemctl daemon-reload'
   action :nothing
 end
+
+include_recipe 'sickbeard::_nginx'

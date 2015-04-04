@@ -1,0 +1,11 @@
+[Unit]
+Description=Nginx
+After=network.target
+
+[Service]
+PIDFile=/var/run/nginx/nginx.pid
+ExecStart=/opt/nginx-1.6.2/sbin/nginx
+ExecReload=/bin/kill -HUP $MAINPID
+
+[Install]
+WantedBy=multi-user.target

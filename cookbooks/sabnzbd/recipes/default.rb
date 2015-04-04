@@ -14,6 +14,7 @@ end
 
 package 'par2'
 package 'unrar-free'
+package 'python-setuptools'
 
 easy_install_package 'cheetah' do
   version '2.4.4'
