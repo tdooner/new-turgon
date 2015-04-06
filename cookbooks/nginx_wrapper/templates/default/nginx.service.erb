@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=forking
-PIDFile=/var/run/nginx/nginx.pid
+PIDFile=/var/run/nginx.pid
 ExecStartPre=/opt/nginx-1.6.2/sbin/nginx -t
 ExecStart=/opt/nginx-1.6.2/sbin/nginx
 ExecReload=/bin/kill -HUP $MAINPID
