@@ -24,6 +24,10 @@ nginx_site '000-default' do
   enable false
 end
 
+nginx_site 'http_file_server' do
+  template 'http_file_server.vhost.erb'
+end
+
 chef_gem 'chef-rewind'
 require 'chef/rewind'
 unwind 'template[/etc/init.d/nginx]'

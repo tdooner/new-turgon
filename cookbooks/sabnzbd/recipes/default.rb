@@ -13,7 +13,6 @@ directory '/home/sabnzbd' do
 end
 
 package 'par2'
-package 'unrar-free'
 package 'python-setuptools'
 
 easy_install_package 'cheetah' do
