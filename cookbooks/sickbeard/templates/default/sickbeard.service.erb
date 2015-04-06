@@ -6,7 +6,7 @@ After=network.target
 User=<%= node['sickbeard']['user'] %>
 Group=<%= node['sickbeard']['user'] %>
 WorkingDirectory=/usr/local/sickbeard
-ExecStart=/usr/bin/python SickBeard.py
+ExecStart=/usr/bin/python SickBeard.py --config=/usr/local/sickbeard/config.ini
 
 [Install]
 WantedBy=multi-user.target

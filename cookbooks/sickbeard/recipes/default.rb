@@ -11,10 +11,19 @@ ark 'sickbeard' do
   url 'https://github.com/midgetspy/Sick-Beard/archive/build-507.tar.gz'
   owner node['sickbeard']['user']
   group node['sickbeard']['user']
+
+  notifies :run, 'execute[fix-sickbeard-webroot]'
 end
 
 template '/etc/systemd/system/sickbeard.service' do
   notifies :run, 'execute[systemctl-daemon-reload]', :immediately
+end
+
+execute 'fix-sickbeard-webroot' do
+  command "sed -ie '/web_root =/c\web_root = /sickbeard' /usr/local/sickbeard/config.ini"
+  not_if "grep -E 'web_root.*sickbeard' /usr/local/sickbeard/config.ini"
+
+  notifies :restart, 'service[sickbeard]'
 end
 
 service 'sickbeard' do
